@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    node_express_app:
+        ports:
+        - 6888:8888
+        image: node:lts
+        container_name: node_express_app
+        tty: true
+        volumes:
+        - ../src:/src
+        working_dir: "/src"
